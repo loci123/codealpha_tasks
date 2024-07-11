@@ -11,3 +11,205 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  display: inline-block;
+  margin-top: -100px;
+  margin-left:-400px;
+}
+.text {
+  color:#d9ff00;
+  font-size: 5em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+        typing 2s steps(3),/*steps should be the number of letters*/
+        cursor .6s step-end infinite ;
+  }
+  /* cursor blinking */
+  @keyframes cursor {
+  50% { border-color: transparent }
+  }
+  @keyframes typing{
+  from {width: 0;}
+  }
+
+
+.age-calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #000000, #8b008b, #696969);
+  color: white;
+}
+
+.age-calculator h1 {
+  align-self: flex-start;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+  
+}
+
+.age-calculator .title1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 3em;
+  color: white;
+}
+
+.age-calculator .title .colored-age {
+  font-size: 3em;
+  color: #d9ff00;
+  display: flex;
+  margin-left: 320px; /* Adjust the spacing as needed */
+  margin-top: -10px; /* Move it up slightly */
+}
+
+.age-calculator input {
+  padding: 15px;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 300px; /* Increase the size of the input box */
+}
+
+/* styles.css */
+.age-calculator button {
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffffff, #e30bff, #d9ff00);
+  color: rgb(0, 0, 0);
+  border: 1px solid black; /* Black border */
+  border-radius: 5px;
+  transition: transform 0.2s ease; /* For button enlargement */
+
+  /* Other button styles */
+}
+
+.age-calculator button:active {
+  transform: scale(1.05); /* Enlarge on click */
+}
+
+
+.age-calculator button:hover {
+  background-color: #8b008b; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  transform: scale(1.05);
+  animation: pop 1.2s linear infinite;
+
+}
+@keyframes pop {
+  
+  25%{
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.age-result {
+  margin-top: 20px;
+}
+
+.age-value {
+  font-size: 3em;
+  color: #d9ff00;
+  animation: grow 1s ease-in-out forwards;
+}
+
+@keyframes grow {
+  from {
+    opacity: 0;
+    transform: scale(0.5); /* Start from a smaller size */
+  }
+  to {
+    opacity: 0.8;
+    transform: scale(2); /* End at a larger size */
+  }
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.815); /* Adjust opacity as needed */
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.strong{
+  width: 200px;
+  height: 100px;
+}
+
+.h1{
+  width: 200px;
+}
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.typing-effect > strong {
+  display: inline-block;
+  animation: typing 2s steps(4, end) forwards;
+  overflow: hidden;
+  border-right: 3px solid transparent; /* Cursor effect */
+  white-space: nowrap; /* Prevents wrapping */
+  margin: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 4ch; /* Adjust width as needed */
+  }
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 15px; /* Added padding */
+  font-size: 1.35em;
+  color: #fff; /* Changed font color */
+  background-color: #e74c3c; /* Added background color */
+  border: 1px solid #e74c3c; /* Added border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  border-radius: 5px; /* Rounded corners */
+}
